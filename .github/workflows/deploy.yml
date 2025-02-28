@@ -28,6 +28,7 @@ jobs:
           docker build -t ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/smartcloudops:latest -f Dockerfile .
           docker push ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/smartcloudops:latest
 
+
   deploy:
     name: Deploy to AKS
     needs: build
